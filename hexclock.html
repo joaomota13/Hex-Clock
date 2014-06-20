@@ -16,11 +16,12 @@ function sethourcolor()
 	var sc = data.getSeconds();
 	if (sc < 10)  sc = '0'+sc;
 	$("body").css("background-color", "#" + hr + mn + sc);
-	$("p").text(hr + " hours, " + mn + " minutes and " + sc + " seconds.<br><span>#" + hr + mn + sc + "</span>");
+	//$("p").text(hr + " hours, " + mn + " minutes and " + sc + " seconds.<br><span>#" + hr + mn + sc + "</span>");
+	document.getElementById("hour_show").innerHTML(hr + " hours, " + mn + " minutes and " + sc + " seconds.<br><span>#" + hr + mn + sc + "</span>");
 }
 </script>
 <style>
-.hour_show
+#hour_show
 {
 	margin-top: 325px;
 	margin-left: 30%;
@@ -30,13 +31,13 @@ function sethourcolor()
 	font-weight: 100;
 }
 
-.hour_show span
+#hour_show span
 {
 	font-size: 50%;
 }
 </style>
 </head>
 <body>
-<p class="hour_show"></p>
+<p id="hour_show"></p>
 </body>
 </html>
