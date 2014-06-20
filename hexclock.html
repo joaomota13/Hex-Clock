@@ -1,0 +1,26 @@
+<html>
+<head>
+<title> Hex Clock </title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+
+var timer = setInterval(function(){sethourcolor()},1000);
+
+function sethourcolor()
+{
+	var data = new Date();
+	var hr = data.getHours();
+	if (hr < 10)  hr = '0'+hr;
+	var mn = data.getMinutes();
+	if (mn < 10)  mn = '0'+mn;
+	var sc = data.getSeconds();
+	if (sc < 10)  sc = '0'+sc;
+	$("body").css("background-color", "#" + hr + mn + sc);
+	$("p").text(hr + " hours, " + mn + " minutes and " + sc + " seconds.");
+}
+</script>
+</head>
+<body>
+<p style="margin-top: 325px; margin-left: 575px; font-size: 200%; font-family: 'lato', helvetica, 'segoe ui'; color: white; font-weight: 100;"></p>
+</body>
+</html>
