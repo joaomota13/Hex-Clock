@@ -16,11 +16,27 @@ function sethourcolor()
 	var sc = data.getSeconds();
 	if (sc < 10)  sc = '0'+sc;
 	$("body").css("background-color", "#" + hr + mn + sc);
-	$("p").text(hr + " hours, " + mn + " minutes and " + sc + " seconds.");
+	$("p").text(hr + " hours, " + mn + " minutes and " + sc + " seconds.<br><span>#" + hr + mn + sc + "</span>");
 }
 </script>
+<style>
+.hour_show
+{
+	margin-top: 325px;
+	margin-left: 30%;
+	font-size: 200%;
+	font-family: 'lato', helvetica, 'segoe ui';
+	color: white;
+	font-weight: 100;
+}
+
+.hour_show span
+{
+	font-size: 50%;
+}
+</style>
 </head>
 <body>
-<p style="margin-top: 325px; margin-left: 30%; font-size: 200%; font-family: 'lato', helvetica, 'segoe ui'; color: white; font-weight: 100;"></p>
+<p class="hour_show"></p>
 </body>
 </html>
