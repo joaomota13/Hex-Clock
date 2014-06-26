@@ -15,6 +15,7 @@ function sethourcolor()
 	if (mn < 10)  mn = '0'+mn;
 	var sc = data.getSeconds();
 	if (sc < 10)  sc = '0'+sc;
+	var hexelemnt = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"];
 	$("body").css("background-color", "#" + hr + mn + sc);
 	//$("p").text(hr + " hours, " + mn + " minutes and " + sc + " seconds.<br><span>#" + hr + mn + sc + "</span>");
 	document.getElementById("hour_show").innerHTML = hr + " hours, " + mn + " minutes and " + sc + " seconds.<br><span>#" + hr + mn + sc + "</span>";
