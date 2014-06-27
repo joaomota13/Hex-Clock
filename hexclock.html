@@ -11,19 +11,19 @@ function sethourcolor()
 	var data = new Date();
 	
 	var hr = data.getHours();
-	var hexhr = (hr).toString(10).split("").map(function(t){return parseInt(t)})
 	if (hr < 10)  hr = '0'+hr;
+	var hexhr = (hr).toString(10).split("").map(function(t){return parseInt(t)})
 	
 	var mn = data.getMinutes();
-	var hexmn = (mn).toString(10).split("").map(function(t){return parseInt(t)})
 	if (mn < 10)  mn = '0'+mn;
+	var hexmn = (mn).toString(10).split("").map(function(t){return parseInt(t)})
 	
 	var sc = data.getSeconds();
-	var hexsc = (sc).toString(10).split("").map(function(t){return parseInt(t)})
 	if (sc < 10)  sc = '0'+sc;
+	var hexsc = (sc).toString(10).split("").map(function(t){return parseInt(t)})
 	
 	var hexelemnt = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"];
-	$("body").css("background-color", "#" + hr[0] + "" + hr[1] + mn + sc);
+	$("body").css("background-color", "#" + hr[0] + "" + hr[1] + mn[0] + "" + mn[1] + sc[0] + "" + sc[1]);
 	//$("p").text(hr + " hours, " + mn + " minutes and " + sc + " seconds.<br><span>#" + hr + mn + sc + "</span>");
 	document.getElementById("hour_show").innerHTML = hr + " hours, " + mn + " minutes and " + sc + " seconds.<br><span>#" + hr + mn + sc + "</span>";
 }
