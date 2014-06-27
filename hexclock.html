@@ -28,7 +28,7 @@ function sethourcolor()
 	var s1 = hexsc[0];
 	var s2 = hexsc[1];
 	
-	var hexelement = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F"];
+	var hexelement = ["A", "B", "C", "D", "E", "F", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 	var cssbgcolor = hexelement[h1] + "" + hexelement[h2] + hexelement[m1] + "" + hexelement[m2] + hexelement[s1] + "" + hexelement[s2];
 	$("body").css("background-color", "#" + cssbgcolor);
 	//$("p").text(hr + " hours, " + mn + " minutes and " + sc + " seconds.<br><span>#" + hr + mn + sc + "</span>");
